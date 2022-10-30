@@ -178,7 +178,9 @@ function checkAnswer(choice) {
 }
 
 function incrementScore() {
-    
+    document.getElementsByClassName('circle')[questionCounter].style.backgroundColor = "green";
+    rightAnswers++;
+    score += questions[index].score;
 }
 
 function incrementWrongAnswer() {
