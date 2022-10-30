@@ -184,7 +184,10 @@ function incrementScore() {
 }
 
 function incrementWrongAnswer() {
-    
+    document.getElementsByClassName('circle')[questionCounter].style.backgroundColor = "red";
+    let rightAnswer = questions[index].choice[questions[index].answer-1];
+    alert(`You gave wrong answer. The right one is: ${rightAnswer}`);
+    wrongAnswers++;
 }
 
 function displayQuestion() {
