@@ -151,7 +151,30 @@ function runGame() {
 }
 
 function checkAnswer(choice) {
-    
+    let choices = document.getElementsByClassName('choices-container');
+
+    for (let i = 0; i < choices.length; i++) {
+        choices[i].style.pointerEvents = "none";
+    }
+
+    if (choice === questions[index].answer) {
+        choices[choice-1].style.borderColor = "green";
+        incrementScore();
+    } else {
+        choices[choice-1].style.borderColor = "red";
+        incrementWrongAnswer();
+    }
+
+    setTimeout(function() {
+        for (let i = 0; i < choices.length; i++) {
+            choices[i].style.pointerEvents = "auto";
+            choices[i].style.borderColor = "black";
+            runGame();
+        }
+    }, 2000);
+
+    questions.splice(index, 1);
+    questionCounter++;
 }
 
 function incrementScore() {
