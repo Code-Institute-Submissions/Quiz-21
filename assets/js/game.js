@@ -142,7 +142,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function runGame() {
-    
+    if (questionAmount === questionCounter) {
+        endOfGame();
+    } else {
+        index = Math.floor(Math.random() * (questionAmount - questionCounter - 1));
+        displayQuestion();
+    }
 }
 
 function checkAnswer(choice) {
