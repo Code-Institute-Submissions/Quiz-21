@@ -29,17 +29,17 @@ body {
 .container-home {
     border-radius: 25px;
     padding: 0 1%;
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 200px;
     opacity: .9;
 }
 
 h1 {
-    margin: 0;
+    margin: 2%;
 }
 
 .btn {
-    width: 50%;
+    width: 70%;
     height: 20%;
     border-radius: 25px;
     background-color: black;
@@ -62,8 +62,8 @@ h1 {
     .container-home {
         border-radius: 25px;
         padding: 0 1%;
-        width: 40%;
-        height: 30%;
+        width: 30%;
+        height: 200px;
         opacity: .9;
     }
 
