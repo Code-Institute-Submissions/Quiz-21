@@ -191,7 +191,12 @@ function incrementWrongAnswer() {
 }
 
 function displayQuestion() {
-    
+    document.getElementById('question').textContent = questions[index].question;
+    let choices = document.getElementsByClassName('choices-container');
+
+    for (let i = 0; i < choices.length; i++) {
+        choices[i].textContent = questions[index].choice[i];
+    }
 }
 
 function endOfGame() {
