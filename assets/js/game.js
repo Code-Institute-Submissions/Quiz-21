@@ -118,6 +118,29 @@ let wrongAnswers = 0;
 let index;
 let score = 0;
 
+document.addEventListener("DOMContentLoaded", function() {
+    let answer;
+    const choices = document.getElementsByClassName('choices-container');
+
+    for (let choice of choices) {
+        choice.addEventListener("click", function() {
+            if (choice.dataset["number"] === "1") {
+                answer = 1;
+            } else if (choice.dataset["number"] === "2") {
+                answer = 2;
+            } else if (choice.dataset["number"] === "3") {
+                answer = 3;
+            } else if (choice.dataset["number"] === "4") {
+                answer = 4;
+            }
+
+            checkAnswer(answer);
+        });
+    }
+
+    runGame();
+});
+
 function runGame() {
     
 }
