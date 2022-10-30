@@ -200,5 +200,17 @@ function displayQuestion() {
 }
 
 function endOfGame() {
+    let choices = document.getElementsByClassName('choices-container');
+    document.getElementById('question').textContent = 'Congratulations you have finished the Quiz!';
     
+    while (choices.length > 0) {
+        choices[0].remove();
+    }
+
+    localStorage.setItem("NewHighScore", score);
+
+    setTimeout(function() {
+        alert(`You gave ${rightAnswers} right and ${wrongAnswers} wrong answers. Your score is ${score}`);
+        window.location.assign('/end.html');
+    }, 2000);
 }
