@@ -211,6 +211,6 @@ function endOfGame() {
 
     setTimeout(function() {
         alert(`You gave ${rightAnswers} right and ${wrongAnswers} wrong answers. Your score is ${score}`);
-        window.location.assign('/end.html');
+        window.location.assign('end.html');
     }, 2000);
 }

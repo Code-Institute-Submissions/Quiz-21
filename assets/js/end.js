@@ -20,5 +20,5 @@ saveHighScore = (event) => {
     highScores.splice(maxIndex);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/index.html');
+    window.location.assign('index.html');
 }
