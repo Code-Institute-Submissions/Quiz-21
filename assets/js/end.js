@@ -1,4 +1,4 @@
-const maxIndex = 10;
+const maxIndex = 5;
 
 document.getElementById('username').addEventListener('keyup', () => {
     document.getElementById('saveHighScoreBtn').disabled = !username.value;
